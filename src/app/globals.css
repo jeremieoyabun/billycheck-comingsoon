@@ -1,0 +1,243 @@
+:root{
+  --bg:#F6F9FF;
+  --panel:#FFFFFF;
+  --text:#0F172A;
+  --muted:#64748B;
+  --line:rgba(15,23,42,.10);
+
+  --primary:#2563EB;
+  --primary-2:#1D4ED8;
+
+  --radius:18px;
+  --shadow: 0 16px 40px rgba(2,6,23,.08);
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+html, body{ height:100%; }
+
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:var(--text);
+  background:
+    radial-gradient(900px 500px at 50% 0%, rgba(37,99,235,.10), transparent 60%),
+    linear-gradient(180deg, var(--bg), #FFFFFF 55%, var(--bg));
+}
+
+a{ color:inherit; text-decoration:none; }
+
+.container{
+  width:100%;
+  max-width:1080px;
+  margin:0 auto;
+  padding:28px 18px 70px;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.brand{
+  font-weight:900;
+  font-size:26px;
+  letter-spacing:-0.6px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.brandMark{
+  width:12px; height:12px; border-radius:999px;
+  background: radial-gradient(circle at 30% 30%, #FFFFFF, var(--primary));
+  box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+}
+
+.navRight{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.pill{
+  font-size:12px;
+  font-weight:800;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid rgba(37,99,235,.20);
+  background: rgba(37,99,235,.08);
+  color: rgba(29,78,216,.95);
+}
+
+.cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  height:42px;
+  padding:0 16px;
+  border-radius:12px;
+  border:1px solid rgba(37,99,235,.18);
+  background: linear-gradient(180deg, var(--primary), var(--primary-2));
+  color:white;
+  font-weight:800;
+  box-shadow: 0 12px 26px rgba(37,99,235,.22);
+  cursor:pointer;
+  transition: transform .12s ease;
+}
+
+.cta:hover{ transform: translateY(-1px); }
+
+.hero{
+  margin-top:56px;
+  text-align:center;
+}
+
+.heroBilly{
+  width:min(160px, 46vw);
+  height:auto;
+  display:block;
+  margin:0 auto 18px;
+}
+
+.h1{
+  font-size: clamp(34px, 5vw, 54px);
+  line-height:1.05;
+  letter-spacing:-1px;
+  font-weight:900;
+}
+
+.h1 .accent{
+  color: var(--primary);
+}
+
+.sub{
+  margin:14px auto 0;
+  max-width:640px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.6;
+}
+
+.heroCta{
+  margin-top:22px;
+  display:flex;
+  justify-content:center;
+}
+
+.heroNote{
+  margin-top:10px;
+  color: rgba(100,116,139,.9);
+  font-size:12px;
+}
+
+.section{
+  margin-top:56px;
+}
+
+.sectionTitle{
+  text-align:center;
+  font-weight:900;
+  font-size:22px;
+  letter-spacing:-0.3px;
+}
+
+.sectionSub{
+  text-align:center;
+  color:var(--muted);
+  margin-top:8px;
+  font-size:14px;
+}
+
+.cards{
+  margin-top:24px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:16px;
+}
+
+.card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding:18px 18px;
+  box-shadow: 0 10px 22px rgba(2,6,23,.04);
+}
+
+.cardTitle{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:900;
+  font-size:15px;
+}
+
+.cardText{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.45;
+}
+
+.waitlist{
+  margin-top:22px;
+  display:flex;
+  justify-content:center;
+}
+
+.form{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  width:min(620px, 100%);
+}
+
+.input{
+  height:44px;
+  padding:0 14px;
+  border-radius:12px;
+  border:1px solid rgba(15,23,42,.14);
+  background:#FFFFFF;
+  min-width:260px;
+  outline:none;
+}
+
+.input:focus{
+  border-color: rgba(37,99,235,.55);
+  box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+}
+
+.btn{
+  height:44px;
+  padding:0 16px;
+  border-radius:12px;
+  border:1px solid rgba(37,99,235,.18);
+  background: linear-gradient(180deg, var(--primary), var(--primary-2));
+  color:white;
+  font-weight:900;
+  cursor:pointer;
+  transition: transform .12s ease;
+}
+
+.btn:hover{ transform: translateY(-1px); }
+
+.note{
+  text-align:center;
+  margin-top:12px;
+  color: rgba(100,116,139,.9);
+  font-size:12px;
+}
+
+.footer{
+  margin-top:60px;
+  text-align:center;
+  color: rgba(100,116,139,.8);
+  font-size:12px;
+}
+
+@media (max-width: 900px){
+  .cards{ grid-template-columns: 1fr; }
+}
