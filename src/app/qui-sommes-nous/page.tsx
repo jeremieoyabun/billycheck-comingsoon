@@ -20,10 +20,7 @@ export default function QuiSommesNousPage() {
         </p>
 
         <div className={styles.ctas}>
-          <Link href="/" className={`${styles.btn} ${styles.btnPrimary}`}>
-            🔎 Checker ma facture
-          </Link>
-
+         
           <a href="mailto:contact@billycheck.com" className={`${styles.btn} ${styles.btnGhost}`}>
             ✉️ Nous contacter
           </a>
