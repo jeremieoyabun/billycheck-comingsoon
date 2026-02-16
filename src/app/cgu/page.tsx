@@ -1,3 +1,5 @@
+import LegalPage from "../components/LegalPage";
+
 export const metadata = {
   title: "Conditions Générales d’Utilisation | BillyCheck",
   description: "Conditions Générales d’Utilisation (CGU) du service BillyCheck.",
