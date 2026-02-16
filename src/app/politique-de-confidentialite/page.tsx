@@ -12,16 +12,11 @@ function H({ children }: { children: React.ReactNode }) {
 export default function PolitiqueConfidentialitePage() {
   const COMPANY = "ENNAVA (SAS)";
   const ADDRESS = "3 rue de la Lune, 75002 Paris, France";
-  const CONTACT_EMAIL = "privacy@billycheck.com"; // TODO: remplace par ton email RGPD réel
+  const CONTACT_EMAIL = "contact@billycheck.com";
   const SERVICE = "BillyCheck";
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-12">
-      <h1 className="text-3xl font-extrabold tracking-tight text-slate-900">
-        Politique de confidentialité
-      </h1>
-      <p className="mt-2 text-sm text-slate-600">Dernière mise à jour: 16/02/2026</p>
-
+    <LegalPage title="Politique de confidentialité" updatedAt="16/02/2026">
       <H>1. Responsable de traitement</H>
       <p className="mt-3 text-sm leading-6 text-slate-700">
         Le responsable de traitement est {COMPANY}, {ADDRESS}. Contact:{" "}
@@ -37,9 +32,7 @@ export default function PolitiqueConfidentialitePage() {
           Données fournies via document téléversé (ex: facture): informations utiles à l’analyse (montants, consommation,
           période, intitulés tarifaires). Le document peut contenir des données personnelles selon son contenu.
         </li>
-        <li>
-          Données extraites et structurées: chiffres et champs nécessaires aux estimations et comparaisons.
-        </li>
+        <li>Données extraites et structurées: chiffres et champs nécessaires aux estimations et comparaisons.</li>
         <li>
           Données techniques: adresse IP, journaux d’accès, informations de navigateur et d’appareil, données de sécurité
           et anti-fraude.
@@ -70,15 +63,12 @@ export default function PolitiqueConfidentialitePage() {
         </li>
         <li>
           Données extraites: conservées le temps nécessaire à l’affichage du résultat, à la gestion du support et à la lutte
-          anti-fraude, puis supprimées ou anonymisées. Par défaut: durée courte recommandée (ex: 30 jours) à ajuster selon ton fonctionnement réel.
+          anti-fraude, puis supprimées ou anonymisées. Par défaut: durée courte recommandée (ex: 30 jours) à ajuster selon votre fonctionnement réel.
         </li>
         <li>
-          Logs techniques: durée limitée (ex: 6 à 12 mois) pour sécurité et diagnostic, à ajuster selon ta stack et tes obligations.
+          Logs techniques: durée limitée (ex: 6 à 12 mois) pour sécurité et diagnostic, à ajuster selon votre stack et vos obligations.
         </li>
       </ul>
-      <p className="mt-3 text-sm leading-6 text-slate-700">
-        Important: ces durées doivent refléter exactement ce que vous faites en production. Ajustez-les avant mise en ligne.
-      </p>
 
       <H>6. Destinataires et sous-traitants</H>
       <p className="mt-3 text-sm leading-6 text-slate-700">
@@ -99,7 +89,7 @@ export default function PolitiqueConfidentialitePage() {
 
       <H>8. Sécurité</H>
       <p className="mt-3 text-sm leading-6 text-slate-700">
-        Nous mettons en place des mesures techniques et organisationnelles raisonnables pour protéger les données
+        {SERVICE} met en place des mesures techniques et organisationnelles raisonnables pour protéger les données
         (contrôles d’accès, chiffrement en transit, journalisation, limitation des accès, etc.).
       </p>
 
@@ -121,6 +111,6 @@ export default function PolitiqueConfidentialitePage() {
         Le site peut utiliser des cookies strictement nécessaires au fonctionnement. Les cookies de mesure d’audience
         ou marketing, lorsqu’ils sont utilisés, peuvent nécessiter votre consentement selon la configuration mise en place.
       </p>
-    </main>
+    </LegalPage>
   );
 }

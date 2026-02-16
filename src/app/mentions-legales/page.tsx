@@ -17,19 +17,13 @@ function Item({ label, value }: { label: string; value: React.ReactNode }) {
 
 export default function MentionsLegalesPage() {
   const SITE_NAME = "BillyCheck";
-  const SITE_URL = "https://billycheck.com"; // TODO: remplace si besoin
-  const CONTACT_EMAIL = "contact@billycheck.com"; // TODO: remplace par ton email réel
+  const SITE_URL = "https://billycheck.com";
+  const CONTACT_EMAIL = "contact@billycheck.com";
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-12">
-      <h1 className="text-3xl font-extrabold tracking-tight text-slate-900">
-        Mentions légales
-      </h1>
-      <p className="mt-2 text-sm text-slate-600">
-        Dernière mise à jour: 16/02/2026
-      </p>
-
-      <section className="mt-8 space-y-5">
+    <LegalPage title="Mentions légales" updatedAt="16/02/2026">
+      
+      <section className="space-y-5">
         <h2 className="text-xl font-bold text-slate-900">Éditeur du site</h2>
 
         <Item label="Dénomination sociale" value="ENNAVA (SAS)" />
@@ -38,7 +32,14 @@ export default function MentionsLegalesPage() {
         <Item label="SIRET (siège)" value="877 765 115 00010" />
         <Item label="TVA intracommunautaire" value="FR79877765115" />
         <Item label="Directeur de la publication" value="Marc-Olivier CRISAN" />
-        <Item label="Contact" value={<a className="underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>} />
+        <Item
+          label="Contact"
+          value={
+            <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>
+              {CONTACT_EMAIL}
+            </a>
+          }
+        />
       </section>
 
       <section className="mt-10 space-y-5">
@@ -69,8 +70,8 @@ export default function MentionsLegalesPage() {
             les informations officielles des fournisseurs ou partenaires.
           </li>
           <li>
-            {SITE_NAME} ne garantit pas l’exactitude exhaustive des extractions (OCR, qualité du document, formats variables) ni
-            l’intérêt des offres proposées par des partenaires.
+            {SITE_NAME} ne garantit pas l’exactitude exhaustive des extractions (OCR, qualité du document, formats variables)
+            ni l’intérêt des offres proposées par des partenaires.
           </li>
         </ul>
       </section>
@@ -91,6 +92,7 @@ export default function MentionsLegalesPage() {
           Toute reproduction, représentation ou exploitation non autorisée est interdite.
         </p>
       </section>
-    </main>
+
+    </LegalPage>
   );
 }
