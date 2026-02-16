@@ -29,7 +29,9 @@ export default function Page() {
   }
 
   return (
-    <main className="container min-h-screen flex flex-col">
+  <div className="min-h-screen flex flex-col">
+    {/* ✅ Tout le contenu dans un container centré */}
+    <main className="container flex-1">
       <header className="header">
         <img src="/logo.png" alt="BillyCheck" style={{ height: 28 }} />
 
@@ -38,70 +40,69 @@ export default function Page() {
         </div>
       </header>
 
-      {/* ✅ Contenu principal qui prend la place dispo */}
-      <div className="flex-1">
-        <section className="hero">
-          <img className="heroBilly" src="/billy_hero_animated.webp" alt="Billy" />
+      <section className="hero">
+        <img className="heroBilly" src="/billy_hero_animated.webp" alt="Billy" />
 
-          <h1 className="h1">
-            Scanne ta facture.
-            <br />
-            <span className="accent">Billy trouve mieux.</span>
-          </h1>
+        <h1 className="h1">
+          Scanne ta facture.
+          <br />
+          <span className="accent">Billy trouve mieux.</span>
+        </h1>
 
-          <p className="sub">
-            Nous analysons automatiquement ta facture d’énergie et nous comparons les meilleures offres
-            pour te faire économiser chaque année. Simple, rapide, transparent.
-          </p>
+        <p className="sub">
+          Nous analysons automatiquement ta facture d’énergie et nous comparons les meilleures offres
+          pour te faire économiser chaque année. Simple, rapide, transparent.
+        </p>
 
-          <div className="waitlist">
-            <form className="form" onSubmit={onSubmit}>
-              <input
-                className="input"
-                type="email"
-                placeholder="ton@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                disabled={status === "loading"}
-              />
-              <button className="btn" type="submit" disabled={status === "loading"}>
-                {status === "loading" ? "Envoi..." : "Rejoindre la liste"}
-              </button>
-            </form>
+        <div className="waitlist">
+          <form className="form" onSubmit={onSubmit}>
+            <input
+              className="input"
+              type="email"
+              placeholder="ton@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={status === "loading"}
+            />
+            <button className="btn" type="submit" disabled={status === "loading"}>
+              {status === "loading" ? "Envoi..." : "Rejoindre la liste"}
+            </button>
+          </form>
+        </div>
+
+        {status === "ok" && <div className="note">Merci. Nous te prévenons au lancement.</div>}
+        {status === "error" && <div className="note">Oups. Réessaie dans un instant.</div>}
+
+        <div className="note">Un seul email au lancement. Jamais de spam.</div>
+      </section>
+
+      <section className="section">
+        <div className="sectionTitle">Comment ça marche ?</div>
+        <div className="sectionSub">Trois étapes. 30 secondes. C’est tout.</div>
+
+        <div className="cards">
+          <div className="card">
+            <div className="cardTitle">📄 Envoie ta facture</div>
+            <div className="cardText">Photo, PDF ou capture d’écran. Tout marche.</div>
           </div>
 
-          {status === "ok" && <div className="note">Merci. Nous te prévenons au lancement.</div>}
-          {status === "error" && <div className="note">Oups. Réessaie dans un instant.</div>}
-
-          <div className="note">Un seul email au lancement. Jamais de spam.</div>
-        </section>
-
-        <section className="section">
-          <div className="sectionTitle">Comment ça marche ?</div>
-          <div className="sectionSub">Trois étapes. 30 secondes. C’est tout.</div>
-
-          <div className="cards">
-            <div className="card">
-              <div className="cardTitle">📄 Envoie ta facture</div>
-              <div className="cardText">Photo, PDF ou capture d’écran. Tout marche.</div>
-            </div>
-
-            <div className="card">
-              <div className="cardTitle">🤖 Billy analyse</div>
-              <div className="cardText">Nous extrayons les infos utiles pour comparer correctement.</div>
-            </div>
-
-            <div className="card">
-              <div className="cardTitle">💸 Tu vois le meilleur choix</div>
-              <div className="cardText">Comparaison claire et estimation annuelle en quelques secondes.</div>
-            </div>
+          <div className="card">
+            <div className="cardTitle">🤖 Billy analyse</div>
+            <div className="cardText">Nous extrayons les infos utiles pour comparer correctement.</div>
           </div>
-        </section>
-      </div>
 
-      {/* ✅ Footer global (légales, etc.) */}
-      <Footer />
+          <div className="card">
+            <div className="cardTitle">💸 Tu vois le meilleur choix</div>
+            <div className="cardText">Comparaison claire et estimation annuelle en quelques secondes.</div>
+          </div>
+        </div>
+      </section>
     </main>
-  );
+
+    {/* ✅ Footer en full width */}
+    <Footer />
+  </div>
+);
+
 }
