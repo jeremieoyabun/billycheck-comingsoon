@@ -1,0 +1,62 @@
+.page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(1200px 600px at 50% 0%, #eaf2ff 0%, #ffffff 60%);
+}
+
+.header{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 90px 18px 40px;
+  text-align: center;
+}
+
+.kicker{
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.h1{
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.h1 span{
+  color: #2563eb;
+}
+
+.lead{
+  max-width: 720px;
+  margin: 18px auto 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.section{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 30px 18px 60px;
+  width: 100%;
+  flex: 1;
+}
+
+.h2{
+  font-size: 24px;
+  margin: 0 0 10px;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.p{
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+}

@@ -1,34 +1,23 @@
 "use client";
 
 import Link from "next/link";
+import styles from "./footer.module.css";
 
-export function Footer() {
+export default function Footer() {
   return (
-    <footer className="footerRoot border-t border-slate-200/60 bg-background">
-      <div className="footerInner mx-auto max-w-6xl px-4 sm:px-5 py-8 text-center">
+    <footer className={styles.footer}>
+      <div className={styles.inner}>
+        <nav className={styles.links}>
+          <Link href="/qui-sommes-nous" className={styles.link}>Qui sommes-nous</Link>
+          <Link href="/politique-de-confidentialite" className={styles.link}>Politique de confidentialité</Link>
+          <Link href="/cgu" className={styles.link}>CGU</Link>
+          <Link href="/mentions-legales" className={styles.link}>Mentions légales</Link>
+          <a className={styles.link} href="mailto:contact@billycheck.com">contact@billycheck.com</a>
+        </nav>
 
-        <div className="footerLinks flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-slate-600">
-          <Link href="/qui-sommes-nous" className="footerLink hover:text-slate-900 transition">
-            Qui sommes-nous
-          </Link>
-          <Link href="/politique-de-confidentialite" className="footerLink hover:text-slate-900 transition">
-            Politique de confidentialité
-          </Link>
-          <Link href="/cgu" className="footerLink hover:text-slate-900 transition">
-            CGU
-          </Link>
-          <Link href="/mentions-legales" className="footerLink hover:text-slate-900 transition">
-            Mentions légales
-          </Link>
-          <a href="mailto:contact@billycheck.com" className="footerLink hover:text-slate-900 transition">
-            contact@billycheck.com
-          </a>
-        </div>
-
-        <div className="footerNote mt-4 text-xs text-slate-400">
+        <div className={styles.note}>
           BillyCheck © {new Date().getFullYear()} — Billy ne fournit pas de conseil financier ou juridique.
         </div>
-
       </div>
     </footer>
   );
