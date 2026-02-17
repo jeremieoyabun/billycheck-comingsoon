@@ -1,4 +1,5 @@
 import LegalPage from "../components/LegalPage";
+import Link from "next/link";
 
 export const metadata = {
   title: "Politique de confidentialité | BillyCheck",
@@ -71,7 +72,96 @@ export default function PolitiqueConfidentialitePage() {
         </ul>
       </section>
 
-      {/* Autres sections ici */}
+      <section className="space-y-5">
+        <h2 className="text-xl font-bold text-slate-900">Durées de conservation</h2>
+        <ul className="mt-3 list-disc pl-5 text-sm leading-6 text-slate-700 space-y-2">
+          <li>
+            <span className="font-semibold">Documents téléversés :</span> conservés uniquement le temps nécessaire au traitement
+            technique et à l’analyse, puis supprimés automatiquement dans un délai maximum de 48 heures, sauf obligation légale
+            ou nécessité liée à la sécurité ou à la prévention des abus.
+          </li>
+          <li>
+            <span className="font-semibold">Données extraites et structurées :</span> conservées pendant une durée maximale de 30 jours,
+            afin de permettre l’affichage des résultats, la gestion du support utilisateur et la prévention des usages frauduleux,
+            puis supprimées ou anonymisées.
+          </li>
+          <li>
+            <span className="font-semibold">Données techniques et journaux :</span> conservées pendant une durée maximale de 12 mois
+            à des fins de sécurité, de diagnostic et de conformité.
+          </li>
+        </ul>
+      </section>
+
+      <section className="space-y-5">
+        <h2 className="text-xl font-bold text-slate-900">Destinataires et sous-traitants</h2>
+        <p className="mt-3 text-sm leading-6 text-slate-700">
+          Les données peuvent être traitées par des prestataires techniques agissant en tant que sous-traitants pour le compte de {COMPANY},
+          notamment pour l’hébergement et l’infrastructure, le traitement automatisé et l’analyse, l’envoi d’emails, la mesure d’audience.
+          Ces prestataires sont sélectionnés avec soin et soumis à des obligations contractuelles de confidentialité et de sécurité.
+          {SERVICE} ne vend ni ne loue les données personnelles des utilisateurs.
+        </p>
+      </section>
+
+      <section className="space-y-5">
+        <h2 className="text-xl font-bold text-slate-900">Offres partenaires et redirections</h2>
+        <p className="mt-3 text-sm leading-6 text-slate-700">
+          Lorsque l’utilisateur consulte ou clique sur une offre partenaire, il peut être redirigé vers un site tiers.
+          Les traitements de données réalisés par ces partenaires relèvent exclusivement de leur propre politique de confidentialité
+          et de leurs conditions contractuelles.
+        </p>
+      </section>
+
+      <section className="space-y-5">
+        <h2 className="text-xl font-bold text-slate-900">Transferts hors Union Européenne</h2>
+        <p className="mt-3 text-sm leading-6 text-slate-700">
+          Certains prestataires techniques peuvent être situés hors de l’Union Européenne. Dans ce cas, des garanties appropriées
+          sont mises en place, notamment par l’utilisation de clauses contractuelles types reconnues par la Commission européenne.
+        </p>
+      </section>
+
+      <section className="space-y-5">
+        <h2 className="text-xl font-bold text-slate-900">Traitements automatisés</h2>
+        <p className="mt-3 text-sm leading-6 text-slate-700">
+          Le service repose en partie sur des traitements automatisés. Les résultats fournis peuvent contenir des approximations,
+          erreurs ou omissions liées aux formats des documents, aux données disponibles ou aux règles tarifaires applicables.
+        </p>
+      </section>
+
+      <section className="space-y-5">
+        <h2 className="text-xl font-bold text-slate-900">Sécurité</h2>
+        <p className="mt-3 text-sm leading-6 text-slate-700">
+          {COMPANY} met en œuvre des mesures techniques et organisationnelles raisonnables pour protéger les données personnelles,
+          incluant notamment : contrôles d’accès, chiffrement des communications, journalisation des accès, limitation des droits internes.
+        </p>
+      </section>
+
+      <section className="space-y-5">
+        <h2 className="text-xl font-bold text-slate-900">Droits des utilisateurs</h2>
+        <p className="mt-3 text-sm leading-6 text-slate-700">
+          Conformément au RGPD, l’utilisateur dispose des droits suivants : accès, rectification, effacement, limitation du traitement,
+          opposition, portabilité lorsque applicable. Toute demande peut être adressée à :{" "}
+          <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>
+            {CONTACT_EMAIL}
+          </a>
+          . L’utilisateur peut également introduire une réclamation auprès de la CNIL.
+        </p>
+      </section>
+
+      <section className="space-y-5">
+        <h2 className="text-xl font-bold text-slate-900">Cookies</h2>
+        <p className="mt-3 text-sm leading-6 text-slate-700">
+          Le site utilise des cookies strictement nécessaires à son fonctionnement. Des cookies de mesure d’audience ou marketing peuvent
+          être utilisés uniquement lorsque le consentement de l’utilisateur est requis et a été donné.
+        </p>
+      </section>
+
+      <section className="space-y-5">
+        <h2 className="text-xl font-bold text-slate-900">Modification de la politique</h2>
+        <p className="mt-3 text-sm leading-6 text-slate-700">
+          La présente politique peut être modifiée à tout moment. La version applicable est celle publiée sur le site à la date
+          d’utilisation du service.
+        </p>
+      </section>
     </LegalPage>
   );
 }
