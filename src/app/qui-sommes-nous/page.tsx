@@ -63,7 +63,7 @@ export default function QuiSommesNousPage() {
           <div className={styles.imageWrap}>
             <img
               className={styles.image}
-              src="/team.jpg"
+              src="/team.webp"
               alt="Équipe BillyCheck"
               loading="lazy"
             />
