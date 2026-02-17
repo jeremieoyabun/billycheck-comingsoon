@@ -1,45 +1,88 @@
-.footer{
+.footer {
   width: 100%;
-  border-top: 1px solid rgba(148,163,184,.35);
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
   background: #fff;
 }
 
-.inner{
+.inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 34px 24px;
+  padding: 40px 24px;
   text-align: center;
 }
 
-/* au cas où un parent est étroit */
-@media (max-width: 480px){
-  .inner{ padding-left: 18px; padding-right: 18px; }
+@media (max-width: 480px) {
+  .inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
-.links{
+/* Ligne 1 — Liens principaux */
+.mainLinks {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px 28px;
-  font-size: 16px;
+  gap: 10px 32px;
+  font-size: 15px;
+  font-weight: 500;
   color: #334155;
-  padding: 0 6px;
 }
 
-.link{
+.mainLink {
   color: inherit;
   text-decoration: none;
   white-space: nowrap;
+  transition: color 0.15s;
 }
 
-.link:hover{
-  color: #0f172a;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.mainLink:hover {
+  color: #2563eb;
 }
 
-.note{
-  margin-top: 14px;
-  font-size: 13px;
+/* Séparateur */
+.separator {
+  width: 64px;
+  height: 1px;
+  background: #e2e8f0;
+  margin: 16px auto;
+}
+
+/* Ligne 2 — Liens légaux */
+.legalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 8px;
+  font-size: 12px;
   color: #94a3b8;
+}
+
+.legalLink {
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+
+.legalLink:hover {
+  color: #475569;
+}
+
+.dot {
+  color: #cbd5e1;
+}
+
+@media (max-width: 480px) {
+  .dot {
+    display: none;
+  }
+}
+
+/* Ligne 3 — Copyright */
+.note {
+  margin-top: 16px;
+  font-size: 11px;
+  color: #cbd5e1;
 }
