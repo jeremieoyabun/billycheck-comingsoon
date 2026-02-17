@@ -1,10 +1,13 @@
 import Link from "next/link";
+import Header from "../components/header";
 import Footer from "../components/footer";
 import styles from "./page.module.css";
 
 export default function QuiSommesNousPage() {
   return (
     <main className={styles.page}>
+      <Header />
+
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.kicker}>Qui sommes-nous</div>

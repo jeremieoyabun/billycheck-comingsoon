@@ -10,7 +10,6 @@ export default function Footer() {
         {/* Ligne 1 — Liens principaux */}
         <nav className={styles.mainLinks}>
           <Link href="/qui-sommes-nous" className={styles.mainLink}>Qui sommes-nous</Link>
-          <Link href="/faq" className={styles.mainLink}>FAQ</Link>
           <a className={styles.mainLink} href="mailto:contact@billycheck.com">contact@billycheck.com</a>
         </nav>
 

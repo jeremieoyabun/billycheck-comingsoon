@@ -1,3 +1,4 @@
+import Header from "./header";
 import Footer from "./footer";
 import styles from "./legalPage.module.css";
 
@@ -12,6 +13,7 @@ export default function LegalPage({
 }) {
   return (
     <div className={styles.page}>
+      <Header />
       <main className={styles.container}>
         <header className={styles.header}>
           <h1 className={styles.h1}>{title}</h1>
