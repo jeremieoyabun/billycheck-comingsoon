@@ -31,7 +31,6 @@ export default function MentionsLegalesPage() {
         <Item label="SIREN" value="877 765 115" />
         <Item label="SIRET (siège)" value="877 765 115 00010" />
         <Item label="TVA intracommunautaire" value="FR79877765115" />
-        <Item label="Directeur de la publication" value="Marc-Olivier CRISAN" />
         <Item
           label="Contact"
           value={

@@ -50,8 +50,8 @@ export default function Page() {
         </h1>
 
         <p className="sub">
-          Nous analysons automatiquement ta facture d’énergie et nous comparons les meilleures offres
-          pour te faire économiser chaque année. Simple, rapide, transparent.
+          Nous analysons automatiquement ta facture d’énergie et comparons des offres disponibles,
+          selon ton profil de consommation. Simple, rapide, transparent.
         </p>
 
         <div className="waitlist">
