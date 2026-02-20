@@ -28,7 +28,6 @@ export default function Page() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* ✅ Tout le contenu dans un container centré */}
       <main className="container flex-1">
         <header className="header">
           <img src="/logo.png" alt="BillyCheck" style={{ height: 28 }} />
@@ -47,15 +46,10 @@ export default function Page() {
             <span className="accent">Billy trouve mieux.</span>
           </h1>
 
+          {/* ✅ ÉLEC + TÉLÉCOM au même niveau */}
           <p className="sub">
-            Nous analysons automatiquement ta facture d’énergie et comparons des offres disponibles,
-            selon ton profil de consommation. Simple, rapide, transparent.
-          </p>
-
-          {/* ✅ AJOUT : Télécom teaser (petit, clair, non intrusif) */}
-          <p className="sub" style={{ marginTop: 10, opacity: 0.9 }}>
-            <strong>Nouveau :</strong> bientôt aussi sur les <strong>factures télécom</strong> (mobile, internet, TV),
-            pour repérer les options inutiles et trouver un forfait plus adapté.
+            Nous analysons automatiquement ta facture d’énergie <strong>et télécom</strong> (mobile, internet, TV) et
+            comparons des offres disponibles selon ton profil de consommation. Simple, rapide, transparent.
           </p>
 
           <div className="waitlist">
@@ -93,7 +87,9 @@ export default function Page() {
 
             <div className="card">
               <div className="cardTitle">🤖 Billy analyse</div>
-              <div className="cardText">Nous extrayons les infos utiles pour comparer correctement.</div>
+              <div className="cardText">
+                Nous extrayons les infos utiles (consommation, options, frais) pour comparer correctement.
+              </div>
             </div>
 
             <div className="card">
@@ -101,37 +97,14 @@ export default function Page() {
               <div className="cardText">Comparaison claire et estimation annuelle en quelques secondes.</div>
             </div>
           </div>
-        </section>
 
-        {/* ✅ AJOUT : section Télécom dédiée */}
-        <section className="section">
-          <div className="sectionTitle">Et pour les télécoms ?</div>
-          <div className="sectionSub">Même logique, même simplicité. Bientôt.</div>
-
-          <div className="cards">
-            <div className="card">
-              <div className="cardTitle">📶 Mobile</div>
-              <div className="cardText">Data, appels, options… on repère ce que tu paies sans l’utiliser.</div>
-            </div>
-
-            <div className="card">
-              <div className="cardTitle">🌐 Internet</div>
-              <div className="cardText">Vitesse, promo, durée, frais cachés… on compare à profil équivalent.</div>
-            </div>
-
-            <div className="card">
-              <div className="cardTitle">📺 TV / Packs</div>
-              <div className="cardText">On détecte les bundles “trop larges” et les alternatives plus rentables.</div>
-            </div>
-          </div>
-
+          {/* ✅ Note courte : télécom sans “bientôt / nouveau” */}
           <div className="note" style={{ marginTop: 10 }}>
-            Objectif : te montrer rapidement une option plus adaptée, avec une comparaison lisible.
+            Énergie et télécom (mobile, internet, TV) : mêmes étapes, même logique de comparaison.
           </div>
         </section>
       </main>
 
-      {/* ✅ Footer en full width */}
       <Footer />
     </div>
   );
