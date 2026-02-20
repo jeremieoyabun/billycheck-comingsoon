@@ -48,8 +48,8 @@ export default function Page() {
 
           {/* ✅ ÉLEC + TÉLÉCOM au même niveau */}
           <p className="sub">
-            Nous analysons automatiquement ta facture d’énergie <strong>et télécom</strong> (mobile, internet, TV) et
-            comparons des offres disponibles selon ton profil de consommation. Simple, rapide, transparent.
+            Nous analysons automatiquement ta <strong>facture d’énergie et télécom</strong> (mobile, internet, TV) et
+            comparons des offres disponibles selon ton profil de consommation.<br><strong> Simple, rapide, transparent.</strong> </br>
           </p>
 
           <div className="waitlist">
